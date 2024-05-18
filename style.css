@@ -1,7 +1,10 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: 0;
+
+   
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing:0px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 h1{
@@ -30,18 +33,30 @@ h6{
 body{
     width:100%;
 }
-
+.searchbar{
+    text-align: left;
+    border: 0;
+    width: 600px;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+}
 #header{
     display: flex;
     align-items:center;
     justify-content:space-between;
-    background-color:wheat;
-    box-shadow: 1px 1px 5px gray;
+    background-color:#807f7a;
+    box-shadow: 3px 3px  10px black;
+    padding-left: 20px;
 }
+
 #navbar{
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
+    position::sticky;
+    padding-right: 50px;
+    justify-content: space-between;
    
 }
 #navbar li{
@@ -51,9 +66,11 @@ body{
 #navbar li a{
     text-decoration: none;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
     color: black;
     transition: 0.5s ease;
+    position: relative;
+    font-family: Arial;
 }
 #navbar li a:hover,#navbar li a.active{
     color:red;
@@ -62,4 +79,71 @@ body{
     mix-blend-mode: multiply;
     width: 100px;
     height: 100px;
+}
+#navbar li a:hover:after,#navbar li a.active::after{
+    content: "";
+    width: 50%;
+    height: 2px;
+    background: red;
+    position: absolute;
+    bottom: -5px;
+    right: 50%;
+     
+}
+#cover{
+    background-image: url("src/header_model.jpg");
+    height: 80vh;
+    width: 100%;
+    mix-blend-mode: multiply;
+    background-position: left 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-size:cover;
+    
+
+    
+}
+#cover{
+    padding-left: 40px;
+}
+#cover h4{
+    padding-bottom: 20px;
+}
+#cover h1{
+    color:red;
+    padding-bottom: 20px;
+}
+#cover h2{
+    padding-bottom: 20px;
+}
+#cover p{
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+#cover button{
+    /* border-radius: 12px; */
+
+    border: 0;
+    font-weight: 500;
+    color:white;
+    font-size: large;
+    background-image: url("src/button_background.jpg");
+    /* background:transparent; */
+    /* background-position: left 0 right 30%; */
+    
+    /* background-color: transparent; */
+    padding: 50px;
+    mix-blend-mode: multiply;
+    background-size: cover;
+
+    cursor: pointer;
+
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
 }
